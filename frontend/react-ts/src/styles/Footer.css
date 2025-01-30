@@ -1,0 +1,62 @@
+/* Footer Styles */
+footer {
+  background-color: #333; /* Gris oscuro */
+  color: #fff; /* Blanco */  
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+footer h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #facc15; /* Color amarillo para los títulos */
+}
+
+footer p {
+  color: #e2e8f0; /* Color gris suave para el texto de la empresa */
+}
+
+footer .text-muted {
+  color: #edf2f7; /* Color gris claro para el texto de la empresa */
+}
+
+footer .text-white {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer .text-white:hover {
+  color: #facc15; /* Color amarillo al hacer hover sobre los enlaces */
+}
+
+footer .list-unstyled {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+footer .list-unstyled li {
+  margin-bottom: 10px;
+}
+
+footer .d-flex {
+  display: flex;
+  gap: 15px; /* Espacio entre los íconos de redes sociales */
+}
+
+footer .d-flex a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+footer .d-flex a:hover {
+  color: #facc15; /* Color amarillo al hacer hover sobre los íconos */
+}
+
+footer .border-top {
+  border-color: #4a5568; /* Color de la línea divisoria superior */
+}
+
+footer .text-center p {
+  margin-bottom: 0;
+  color: #e2e8f0; /* Color gris claro para el texto de derechos reservados */
+}
