@@ -1,0 +1,79 @@
+/* Estilos para el componente About Us */
+.about-us-section {
+  padding: 60px 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  color: #035324;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  display: flex; /* O también puedes usar 'grid' si prefieres */
+  justify-content: center; /* Puedes usar 'flex-start', 'center', 'flex-end', 'space-between', etc., según lo que necesites */
+  text-align: justify; /* Esto alinea el texto de manera justificada */
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.team-section {
+  margin-top: 40px;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 28px;
+  color: #086830;
+  margin-bottom: 30px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-evenly; /* Alinea los miembros de manera equidistante */
+  gap: 20px; /* Menor espacio entre los miembros */
+  flex-wrap: wrap;
+  justify-content: center; /* Alinea los miembros al centro */
+}
+
+.team-member {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  height: 400px;
+  width: 400px; /* Reduce el ancho de los miembros */
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.team-image {
+  width: 150px;
+  height: 150px;  /* Asegura que la imagen tenga un tamaño fijo y cuadrado */
+  border-radius: 50%;
+  object-fit: cover;  /* Asegura que la imagen se ajuste al tamaño sin distorsionarse */
+  margin-bottom: 20px;
+}
+
+.team-member-name {
+  font-size: 20px;
+  color: #077e39;
+  margin-bottom: 10px;
+}
+
+.team-member-role {
+  font-size: 16px;
+  color: #777;
+}
