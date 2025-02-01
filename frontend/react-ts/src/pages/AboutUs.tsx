@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/AboutUs.css';
 // Importación de imágenes
 const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}', {

@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   // Función para verificar si la ruta es la actual
-  const isActive = (path) => location.pathname === path ? "active" : "";
+  const isActive = (path:string) => location.pathname === path ? "active" : "";
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-blue-600 p-4">
