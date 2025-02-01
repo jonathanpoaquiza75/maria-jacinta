@@ -1,20 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { FaShoppingCart, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import '../styles/Navbar.css';
 
+const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}', {
+  eager: true, // Esto importa las imágenes inmediatamente en el bundle
+});
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();  // Hook para obtener la ruta actual
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Función para verificar si la ruta es la actual
+  const isActive = (path) => location.pathname === path ? "active" : "";
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-blue-600 p-4">
       <div className="container-fluid">
-        <Link to="/" className="navbar-brand text-xl font-bold">
-          🧴 Yogures & Lácteos - MJ
+        <Link to="/" className="navbar-brand text-xl font-bold text-black">
+          <img 
+            src={(images['../assets/images/logo.png'] as { default: string }).default}
+            alt="Logo" 
+            className="navbar-logo" 
+            style={{ height: '40px' }}  // Puedes ajustar el tamaño según lo necesites
+          />
+          LA ISLA - MJ
         </Link>
 
         <button
@@ -29,46 +43,27 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/" className={`nav-link text-black ${isActive("/")}`}>
                 Inicio
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/productos" className="nav-link">
+              <Link to="/productos" className={`nav-link text-black ${isActive("/productos")}`}>
                 Productos
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <Link
-                to="/categorias"
-                className="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Categorías
+            <li className="nav-item">
+              <Link to="/servicios" className={`nav-link text-black ${isActive("/servicios")}`}>
+                Servicios
               </Link>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <Link to="/categorias/yogures" className="dropdown-item">
-                    Yogures
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/categorias/leches" className="dropdown-item">
-                    Leches
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/categorias/postres" className="dropdown-item">
-                    Postres
-                  </Link>
-                </li>
-              </ul>
             </li>
             <li className="nav-item">
-              <Link to="/contacto" className="nav-link">
+              <Link to="/sobre-nosotros" className={`nav-link text-black ${isActive("/sobre-nosotros")}`}>
+                Sobre Nosotros
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/contacto" className={`nav-link text-black ${isActive("/contacto")}`}>
                 Contacto
               </Link>
             </li>
@@ -82,13 +77,14 @@ const Navbar = () => {
               aria-label="Search"
             />
             <button className="btn btn-outline-light" type="submit">
-              <FaSearch />
+              <FaSearch style={{ color: "#000000" }} />
             </button>
           </form>
 
           <Link to="/carrito" className="btn btn-outline-light">
-            <FaShoppingCart /> <span className="badge bg-danger">3</span>
+            <FaShoppingCart style={{ color: "#000000" }} /> <span className="badge bg-danger">3</span>
           </Link>
+
         </div>
       </div>
     </nav>

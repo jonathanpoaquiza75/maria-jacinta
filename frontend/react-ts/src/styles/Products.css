@@ -6,9 +6,11 @@
   }
   
   .producto-imagen {
-    height: 200px;
-    object-fit: contain; /* Esto asegura que la imagen mantenga las proporciones */
+    width: 80%; /* La imagen ocupará todo el ancho de su contenedor */
+    height: 200px; /* Puedes ajustar esta altura a tu preferencia */
+    object-fit: contain; /* La imagen se recorta para mantener su relación de aspecto */
   }
+  
   
   .card-body {
     text-align: center;
@@ -23,13 +25,16 @@
     color: #555;
   }
   
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
-  }
-  
+/* Asegúrate de que las reglas se apliquen correctamente */
+.card .btn-primary {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.card .btn-primary:hover {
+  background-color: #218838;
+  border-color: #218838;
+}
+.product-title {
+  color: #035324; /* Cambia este valor por el color que desees */
+}

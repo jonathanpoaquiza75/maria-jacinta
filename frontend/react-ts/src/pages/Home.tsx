@@ -2,25 +2,57 @@ import { Carousel, Button } from 'react-bootstrap';
 import '../styles/Home.css';
 import promo1 from '../assets/videos/promo1.mp4';
 
+// Importación de imágenes
 const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}', {
   eager: true, // Esto importa las imágenes inmediatamente en el bundle
 });
+
 const Home = () => {
-    return (
+  return (
+    <div>
+      <div className="welcome-section">
+        <h1 className="display-3 font-weight-bold">Bienvenido a La Isla María Jacinta 🌿🏇</h1>
+        <h2>Turismo y Naturaleza</h2>
+        <p className="mt-4 lead">
+          Descubre la magia de la naturaleza con nuestras cabalgatas y experiencias únicas.
+        </p>
+      </div>
+
       <div className="container text-center py-5">
-        <h1 className="display-3 font-weight-bold">Bienvenido a Maria Jacinta 🥛🍦</h1>
-        <h2>Sabores de Campo</h2>
-        <p className="mt-4 lead">Descubre los mejores yogures y productos lácteos frescos y naturales.</p>
-  
         {/* Fila con dos columnas */}
         <div className="row my-5">
+        <h2 className="section-title">Explora Nuestros Servicios</h2>
           {/* Columna para el Carrusel de productos */}
           <div className="col-md-8">
             <Carousel className="my-5">
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src={(images['../assets/images/logo.png'] as { default: string }).default}
+                  src={(images['../assets/images/cabalgata.png'] as { default: string }).default}
+                  alt="Cabalgata en la isla"
+                />
+                <Carousel.Caption>
+                  <h3>Cabalgatas</h3>
+                  <p>Disfruta de un recorrido a caballo por paisajes espectaculares.</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={(images['../assets/images/naturaleza.png'] as { default: string }).default}
+                  alt="Naturaleza y descanso"
+                />
+                <Carousel.Caption>
+                  <h3>Conexión con la Naturaleza</h3>
+                  <p>Relájate en un entorno natural y vive una experiencia inolvidable.</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={(images['../assets/images/yogurt.png'] as { default: string }).default}
                   alt="Yogur Natural"
                 />
                 <Carousel.Caption>
@@ -28,31 +60,10 @@ const Home = () => {
                   <p>Delicioso yogur natural, perfecto para cualquier momento del día.</p>
                 </Carousel.Caption>
               </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={(images['../assets/images/logo.png'] as { default: string }).default}
-                  alt="Queso Fresco"
-                />
-                <Carousel.Caption>
-                  <h3>Queso Fresco</h3>
-                  <p>Nuestro queso fresco, ideal para ensaladas y platos fríos.</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={(images['../assets/images/logo.png'] as { default: string }).default}
-                  alt="Helado Artesanal"
-                />
-                <Carousel.Caption>
-                  <h3>Helado Artesanal</h3>
-                  <p>Disfruta de nuestro helado artesanal, hecho con ingredientes naturales.</p>
-                </Carousel.Caption>
-              </Carousel.Item>
+
             </Carousel>
           </div>
-  
+
           {/* Columna para el video publicitario */}
           <div className="col-md-4 d-flex justify-content-center align-items-center">
             <div className="video-container">
@@ -67,64 +78,66 @@ const Home = () => {
               ></iframe>
             </div>
           </div>
-          </div>
+        </div>
 
-      {/* Sección de productos destacados */}
-      <div className="my-5">
-        <h2 className="mb-4">Productos Destacados</h2>
-        <div className="row">
-          <div className="col-md-4">
-            <div className="card">
-              <img
-                src={(images['../assets/images/logo.png'] as { default: string }).default}
-                className="card-img-top"
-                alt="Yogur de Frutas"
-              />
-              <div className="card-body">
-                <h5 className="card-title">Yogur de Frutas</h5>
-                <p className="card-text">Yogur con trozos de frutas frescas, lleno de sabor y nutrientes.</p>
-                <Button variant="primary">Ver más</Button>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card">
-              <img
-                src={(images['../assets/images/logo.png'] as { default: string }).default}                
-                className="card-img-top"
-                alt="Leche Entera"
-              />
-              <div className="card-body">
-                <h5 className="card-title">Leche Entera</h5>
-                <p className="card-text">Leche entera fresca, directa de nuestras granjas.</p>
-                <Button variant="primary">Ver más</Button>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card">
-              <img
-                src={(images['../assets/images/logo.png'] as { default: string }).default}
-                className="card-img-top"
-                alt="Yogur Griego"
-              />
-              <div className="card-body">
-                <h5 className="card-title">Yogur Griego</h5>
-                <p className="card-text">Yogur griego cremoso, perfecto para un desayuno saludable.</p>
-                <Button variant="primary">Ver más</Button>
-              </div>
-            </div>
-          </div>
+{/* Sección de experiencias destacadas */}
+<div className="my-5">
+  <h2 className="mb-4">Experiencias Destacadas</h2>
+  <div className="row">
+    <div className="col-md-4">
+      <div className="card">
+        <img
+          src={(images['../assets/images/ruta.jpg'] as { default: string }).default}
+          className="card-img-top"
+          alt="Ruta a caballo"
+        />
+        <div className="card-body">
+          <h5 className="card-title">Ruta a Caballo</h5>
+          <p className="card-text">Un recorrido guiado a caballo por los mejores paisajes de la isla.</p>
+          <Button variant="primary">Descubrir</Button>
         </div>
       </div>
+    </div>
+    <div className="col-md-4">
+      <div className="card">
+        <img
+          src={(images['../assets/images/tirolesa.jpg'] as { default: string }).default}
+          className="card-img-top"
+          alt="Tirolesa"
+        />
+        <div className="card-body">
+          <h5 className="card-title">Tirolesa</h5>
+          <p className="card-text">Vive la emoción de deslizarte por las alturas y disfruta de vistas espectaculares.</p>
+          <Button variant="primary">Explorar</Button>
+        </div>
+      </div>
+    </div>
+    <div className="col-md-4">
+      <div className="card">
+        <img
+          src={(images['../assets/images/familia.png'] as { default: string }).default}
+          className="card-img-top"
+          alt="Actividades en familia"
+        />
+        <div className="card-body">
+          <h5 className="card-title">Actividades en la Familia</h5>
+          <p className="card-text">Diviértete en la cabaña, rodeado de naturaleza y tranquilidad familiar.</p>
+          <Button variant="primary">Ver más</Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-      {/* Sección de contacto */}
-      <div className="my-5">
-        <h2 className="mb-4">Contacto</h2>
-        <p>¿Tienes alguna pregunta o comentario? ¡No dudes en contactarnos!</p>
-        <Button variant="success" href="/contacto">
-          Contáctanos
-        </Button>
+
+
+        <div className="my-5">
+          <h2 className="mb-4">Contacto</h2>
+          <p>¿Listo para tu próxima aventura? ¡Contáctanos y reserva tu experiencia!</p>
+          <Button variant="success" href="/contacto">
+            Contáctanos
+          </Button>
+        </div>
       </div>
     </div>
   );

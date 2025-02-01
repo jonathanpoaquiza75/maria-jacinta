@@ -6,16 +6,16 @@ const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}', {
 });
 
 const productos = [
-  { id: 1, nombre: "Yogur Natural", precio: 2.5, imagen: (images['../assets/images/logo.png'] as { default: string }).default },
-  { id: 2, nombre: "Leche Descremada", precio: 1.8, imagen: (images['../assets/images/logo.png'] as { default: string }).default },
-  { id: 3, nombre: "Queso Fresco", precio: 3.5, imagen: (images['../assets/images/logo.png'] as { default: string }).default },
+  { id: 1, nombre: "Yogur Natural", precio: 2.5, imagen: (images['../assets/images/yogurt.png'] as { default: string }).default },
+  { id: 2, nombre: "Leche Descremada", precio: 1.8, imagen: (images['../assets/images/leche-descremada.jpg'] as { default: string }).default },
+  { id: 3, nombre: "Queso Fresco", precio: 3.5, imagen: (images['../assets/images/queso.png'] as { default: string }).default },
 ];
 
 const Products = () => {
   return (
     <div className="container my-5">
       {/* Encabezado */}
-      <h1 className="text-center mb-4">Nuestros Productos 🥛</h1>
+      <h1 className="text-center mb-4 product-title">Nuestros Productos 🥛</h1>
 
       {/* Cuadrícula de productos */}
       <div className="row row-cols-1 row-cols-md-3 g-4">

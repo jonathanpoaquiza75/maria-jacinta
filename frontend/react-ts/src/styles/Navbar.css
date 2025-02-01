@@ -1,57 +1,89 @@
 /* Navbar Styles */
 .navbar {
-    background-color: #ff84c2; /* Color de fondo personalizado */
-  }
-  
-  .navbar .navbar-brand {
-    color: #ffffff; /* Color del texto del nombre de la marca */
-  }
-  
-  .navbar .navbar-nav .nav-link {
-    color: #ffffff; /* Color de los enlaces de navegación */
-    transition: color 0.3s ease;
-  }
-  
-  .navbar .navbar-nav .nav-link:hover {
-    color: #cd0669; /* Color de los enlaces al pasar el mouse */
-  }
-  
-  .navbar .dropdown-menu {
-    background-color: #2b8341 ; /* Fondo del menú desplegable */
-  }
-  
-  .navbar .dropdown-item {
-    color: #ffffff; /* Color de los elementos del menú desplegable */
-  }
-  
-  .navbar .dropdown-item:hover {
-    color: #facc15; /* Color de los elementos del menú al pasar el mouse */
-  }
-  
-  .navbar .form-control {
-    border-radius: 0.375rem; /* Bordes redondeados para el campo de búsqueda */
-  }
-  
-  .navbar .btn-outline-light {
-    color: #ffffff;
-    border-color: #ffffff;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-  }
-  
-  .navbar .btn-outline-light:hover {
-    background-color: #facc15; /* Fondo del botón al pasar el mouse */
-    border-color: #facc15; /* Borde del botón al pasar el mouse */
-  }
-  
-  .navbar .btn-outline-light .badge {
-    background-color: #e11d48; /* Color de fondo de la insignia del carrito */
-  }
-  
-  .navbar-toggler {
-    border-color: #ffffff; /* Color del botón de menú */
-  }
-  
-  .navbar-toggler-icon {
-    color: #ffffff; /* Color del ícono del botón de menú */
-  }
-  
+  background-color: #f8fbf8; /* Color de fondo personalizado */
+  height: 60px; /* Ajusta la altura del navbar */
+}
+
+.navbar .navbar-brand {
+  color: #000000 !important; /* Color del texto del nombre de la marca */
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #000000 !important; /* Color de los enlaces de navegación */
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #cd0669; /* Color de los enlaces al pasar el mouse */
+}
+
+.navbar .dropdown-menu {
+  background-color: #2b8341; /* Fondo del menú desplegable */
+}
+
+.navbar .dropdown-item {
+  color: #ffffff; /* Color de los elementos del menú desplegable */
+}
+
+.navbar .dropdown-item:hover {
+  color: #facc15; /* Color de los elementos del menú al pasar el mouse */
+}
+
+.navbar .form-control {
+  border-radius: 0.375rem; /* Bordes redondeados para el campo de búsqueda */
+}
+
+.navbar .btn-outline-light {
+  color: #ffffff;
+  border-color: #ffffff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar .btn-outline-light:hover {
+  background-color: #cef6e2; /* Fondo del botón al pasar el mouse */
+  border-color: #cef6e2; /* Borde del botón al pasar el mouse */
+}
+
+.navbar .btn-outline-light .badge {
+  background-color: #cef6e2; /* Color de fondo de la insignia del carrito */
+}
+
+.navbar-toggler {
+  border-color: #ffffff; /* Color del botón de menú */
+}
+
+.navbar-toggler-icon {
+  color: #ffffff; /* Color del ícono del botón de menú */
+}
+
+/* Agregar una línea vertical entre secciones */
+.navbar .navbar-nav .nav-item {
+  border-right: 1px solid #ddd; /* Línea de separación entre los elementos */
+}
+
+.navbar .navbar-nav .nav-item:last-child {
+  border-right: none; /* El último item no tiene borde derecho */
+}
+
+/* Ajustes adicionales */
+.navbar .nav-link {
+  color: black !important;
+}
+
+.navbar .navbar-brand {
+  color: black !important;
+}
+
+.navbar .dropdown-item {
+  color: black !important;
+}
+
+/* Define el color cuando la ruta está activa */
+.nav-link.active {
+  background-color: #cef6e2;
+}
+
+.nav-link.active:hover {
+  color: #077e39 !important;  /* Mantener el mismo color cuando se pasa el mouse */
+}
+
