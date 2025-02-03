@@ -120,7 +120,7 @@ const Home = () => {
           alt="Actividades en familia"
         />
         <div className="card-body">
-          <h5 className="card-title">Actividades en la Familia</h5>
+          <h5 className="card-title">Actividades en Familia</h5>
           <p className="card-text">Diviértete en la cabaña, rodeado de naturaleza y tranquilidad familiar.</p>
           <Button variant="primary">Ver más</Button>
         </div>
